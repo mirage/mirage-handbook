@@ -1,0 +1,41 @@
+- no need to oversell, be precise what we can do at the moment and what we can't!
+
+- tutorial (interactive!?)
+  - introduction: how can i contribute (interactive also, e.g. comment on tutorial/documentation directly? - with link to markdown source or issue or whatever to improve documentation)
+  - hello world
+  - lwt tutorial
+  - now the protocols: device-usage/network
+  - static_website_tls
+  - http_fetch: why is it good to run as unikernel? parse some json (isolated in unikernel), type-safe json parser
+  - how do i run my own irmin-git-mirage unikernel?
+  - how do my unikernels communicate with each other? service-orchestration
+  - how do I run my slideshow as a qubesos/sdl-framebuffer unikernel?
+  - how to run qubes-mirage-firewall? (binary distribution soon)
+  - DNS (resolver, authoritative nameserver)
+
+- operators guide
+  - what is mirageos?
+  - introduction, including available backends and their status
+  - what is the setup? how can i test it is correct?
+  - what is supported in terms of network protocols, file systems, orchestration solutions
+  - building unikernels (including command-line arguments)
+  - where and how can i deploy mirageos? (ec2, gce, self-hosted (albatross), qubes, local development)
+  - troubleshooting / FAQ
+    - Installation problems (based on lwt tutorial)
+    - Configuration problems (based on lwt tutorial)
+
+- developing unikernels
+  - community section: where to get help
+  - concept: underlying API (xen/solo5/hypercall/...), openlibm, ocaml runtime
+  - mirageos interfaces (console, block, random, ...) (and the shape of mirageos - module type definitions & implementations)
+     - Logging and monitoring
+  - coding guidelines and best current practises see https://github.com/mirage/mirage-www/pull/562
+  - mirageos libraries best practises: logs, fmt, astring, randomconv, duration
+    - does ocaml library X work with mirageos? (github topic? badges? opam tags!)
+    - how do I develop OCaml libraries for MirageOS - which libraries to avoid and how to design
+    - build systems and packaging
+  - tests (alcotest, qcheck, crowbar) and setup thereof
+  - debugging sections: how to use gdb (platform-dependent)
+  - tuning MirageOS (OCaml GC settings)
+  - glossary for our concepts and tools: solo5, tender, lwt
+
